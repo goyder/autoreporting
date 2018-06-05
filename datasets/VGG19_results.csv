@@ -1,0 +1,101 @@
+            ,imagenet_index,imagenet_category                                         ,correct
+cat.1001.jpg,282           ,tiger cat                                                 ,True
+cat.103.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.1031.jpg,158           ,toy terrier                                               ,False
+cat.1045.jpg,284           ,"Siamese cat, Siamese"                                    ,True
+cat.1047.jpg,281           ,"tabby, tabby cat"                                        ,True
+cat.1068.jpg,285           ,Egyptian cat                                              ,True
+cat.1087.jpg,283           ,Persian cat                                               ,True
+cat.110.jpg ,283           ,Persian cat                                               ,True
+cat.1100.jpg,283           ,Persian cat                                               ,True
+cat.1103.jpg,281           ,"tabby, tabby cat"                                        ,True
+cat.1107.jpg,332           ,"Angora, Angora rabbit"                                   ,False
+cat.1116.jpg,281           ,"tabby, tabby cat"                                        ,True
+cat.1136.jpg,281           ,"tabby, tabby cat"                                        ,True
+cat.1145.jpg,588           ,hamper                                                    ,False
+cat.1158.jpg,284           ,"Siamese cat, Siamese"                                    ,True
+cat.1161.jpg,223           ,schipperke                                                ,False
+cat.1177.jpg,281           ,"tabby, tabby cat"                                        ,True
+cat.118.jpg ,283           ,Persian cat                                               ,True
+cat.1182.jpg,247           ,"Saint Bernard, St Bernard"                               ,False
+cat.1195.jpg,245           ,French bulldog                                            ,False
+cat.1198.jpg,283           ,Persian cat                                               ,True
+cat.1226.jpg,203           ,West Highland white terrier                               ,False
+cat.1231.jpg,700           ,paper towel                                               ,False
+cat.125.jpg ,282           ,tiger cat                                                 ,True
+cat.1258.jpg,283           ,Persian cat                                               ,True
+cat.127.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.132.jpg ,223           ,schipperke                                                ,False
+cat.147.jpg ,283           ,Persian cat                                               ,True
+cat.150.jpg ,261           ,keeshond                                                  ,False
+cat.155.jpg ,285           ,Egyptian cat                                              ,True
+cat.173.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.183.jpg ,883           ,vase                                                      ,False
+cat.196.jpg ,534           ,"dishwasher, dish washer, dishwashing machine"            ,False
+cat.198.jpg ,285           ,Egyptian cat                                              ,True
+cat.2.jpg   ,281           ,"tabby, tabby cat"                                        ,True
+cat.205.jpg ,283           ,Persian cat                                               ,True
+cat.207.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.209.jpg ,478           ,carton                                                    ,False
+cat.23.jpg  ,223           ,schipperke                                                ,False
+cat.237.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.259.jpg ,223           ,schipperke                                                ,False
+cat.264.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.282.jpg ,285           ,Egyptian cat                                              ,True
+cat.295.jpg ,463           ,"bucket, pail"                                            ,False
+cat.312.jpg ,282           ,tiger cat                                                 ,True
+cat.313.jpg ,700           ,paper towel                                               ,False
+cat.340.jpg ,478           ,carton                                                    ,False
+cat.346.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.353.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.356.jpg ,284           ,"Siamese cat, Siamese"                                    ,True
+cat.379.jpg ,282           ,tiger cat                                                 ,True
+cat.39.jpg  ,281           ,"tabby, tabby cat"                                        ,True
+cat.405.jpg ,285           ,Egyptian cat                                              ,True
+cat.438.jpg ,332           ,"Angora, Angora rabbit"                                   ,False
+cat.444.jpg ,285           ,Egyptian cat                                              ,True
+cat.469.jpg ,283           ,Persian cat                                               ,True
+cat.489.jpg ,356           ,weasel                                                    ,False
+cat.491.jpg ,283           ,Persian cat                                               ,True
+cat.5.jpg   ,284           ,"Siamese cat, Siamese"                                    ,True
+cat.50.jpg  ,285           ,Egyptian cat                                              ,True
+cat.502.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.512.jpg ,285           ,Egyptian cat                                              ,True
+cat.525.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.526.jpg ,285           ,Egyptian cat                                              ,True
+cat.533.jpg ,285           ,Egyptian cat                                              ,True
+cat.539.jpg ,258           ,"Samoyed, Samoyede"                                       ,False
+cat.556.jpg ,284           ,"Siamese cat, Siamese"                                    ,True
+cat.557.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.577.jpg ,285           ,Egyptian cat                                              ,True
+cat.578.jpg ,664           ,monitor                                                   ,False
+cat.584.jpg ,285           ,Egyptian cat                                              ,True
+cat.590.jpg ,478           ,carton                                                    ,False
+cat.594.jpg ,285           ,Egyptian cat                                              ,True
+cat.600.jpg ,282           ,tiger cat                                                 ,True
+cat.602.jpg ,282           ,tiger cat                                                 ,True
+cat.603.jpg ,285           ,Egyptian cat                                              ,True
+cat.604.jpg ,195           ,"Boston bull, Boston terrier"                             ,False
+cat.631.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.641.jpg ,750           ,"quilt, comforter, comfort, puff"                         ,False
+cat.694.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.699.jpg ,283           ,Persian cat                                               ,True
+cat.714.jpg ,463           ,"bucket, pail"                                            ,False
+cat.716.jpg ,369           ,"siamang, Hylobates syndactylus, Symphalangus syndactylus",False
+cat.724.jpg ,225           ,malinois                                                  ,False
+cat.740.jpg ,876           ,"tub, vat"                                                ,False
+cat.749.jpg ,285           ,Egyptian cat                                              ,True
+cat.767.jpg ,968           ,cup                                                       ,False
+cat.772.jpg ,284           ,"Siamese cat, Siamese"                                    ,True
+cat.777.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.811.jpg ,285           ,Egyptian cat                                              ,True
+cat.814.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.906.jpg ,285           ,Egyptian cat                                              ,True
+cat.908.jpg ,87            ,"African grey, African gray, Psittacus erithacus"         ,False
+cat.92.jpg  ,496           ,Christmas stocking                                        ,False
+cat.921.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.953.jpg ,223           ,schipperke                                                ,False
+cat.954.jpg ,285           ,Egyptian cat                                              ,True
+cat.965.jpg ,281           ,"tabby, tabby cat"                                        ,True
+cat.974.jpg ,283           ,Persian cat                                               ,True
+cat.994.jpg ,281           ,"tabby, tabby cat"                                        ,True

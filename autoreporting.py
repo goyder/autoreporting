@@ -1,13 +1,27 @@
 from jinja2 import FileSystemLoader, Environment
 
-# Content to be published
-content = "Hello, world!"
-
-# Configure Jinja and ready the template
+# Configure Jinja and ready the loader
 env = Environment(
     loader=FileSystemLoader(searchpath="templates")
 )
-template = env.get_template("report.html")
+
+# Assemble the templates we'll use
+base_template = env.get_template("report.html")
+table_section_template = env.get_template("table_section.html")
+
+# Content to be published
+title = "Model Report"
+sections = list()
+sections.append(table_section_template.render(
+    model="VGG19",
+    dataset="VGG19_results.csv",
+    table="Table goes here."
+))
+sections.append(table_section_template.render(
+    model="MobileNet",
+    dataset="MobileNet_results.csv",
+    table="Table goes here."
+))
 
 
 def main():
@@ -17,7 +31,10 @@ def main():
     :return:
     """
     with open("outputs/report.html", "w") as f:
-        f.write(template.render(content=content))
+        f.write(base_template.render(
+            title=title,
+            sections=sections
+        ))
 
 
 if __name__ == "__main__":
