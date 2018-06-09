@@ -25,20 +25,6 @@ env = Environment(
 base_template = env.get_template("report.html")
 table_section_template = env.get_template("table_section.html")
 
-# Content to be published
-title = "Model Report"
-sections = list()
-sections.append(table_section_template.render(
-    model="VGG19",
-    dataset="VGG19_results.csv",
-    table=csv_to_html("datasets/VGG19_results.csv")
-))
-sections.append(table_section_template.render(
-    model="MobileNet",
-    dataset="MobileNet_results.csv",
-    table=csv_to_html("datasets/MobileNet_results.csv")
-))
-
 
 def main():
     """
@@ -46,6 +32,20 @@ def main():
     Render a template and write it to file.
     :return:
     """
+    # Content to be published
+    title = "Model Report"
+    sections = list()
+    sections.append(table_section_template.render(
+        model="VGG19",
+        dataset="VGG19_results.csv",
+        table=csv_to_html("datasets/VGG19_results.csv")
+    ))
+    sections.append(table_section_template.render(
+        model="MobileNet",
+        dataset="MobileNet_results.csv",
+        table=csv_to_html("datasets/MobileNet_results.csv")
+    ))
+    
     with open("outputs/report.html", "w") as f:
         f.write(base_template.render(
             title=title,
