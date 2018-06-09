@@ -1,0 +1,13 @@
+<h2>Quick summary</h2>
+<h3>Accuracy</h3>
+{% for model_summary in model_summaries %}
+<p><em>{{ model_summary.model_name }}</em> analysed <em>{{ model_summary.number_of_images }} image(s)</em>, achieving an
+    accuracy of <em>{{ "{:.2%}".format(model_summary.accuracy) }}.</em></p>
+{% endfor %}
+<h3>Trouble spots</h3>
+{% for model_summary in model_summaries %}
+<p><em>{{ model_summary.model_name }}</em> misidentified <em>{{ model_summary.number_misidentified }} image(s)</em>.</p>
+{% endfor %}
+<em>{{ number_misidentified }}</em> misidentified image(s) were common to all models.
+
+
