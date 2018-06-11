@@ -18,17 +18,21 @@ class ModelResults:
         """
         self.model_name = model_name
         self.filepath = filepath
+
         self.dataset = os.path.split(filepath)[-1]
         self.df_results = csv_to_df(filepath)  # Filesystem access
+
         self.number_of_images = len(self.df_results)
+
         self.accuracy = self._calculate_accuracy()
+
         self.misidentified_images = self._get_misidentified_images()
         self.number_misidentified = len(self.misidentified_images)
 
     def _calculate_accuracy(self):
         """
         Return the accuracy for the dataset.
-        :return:
+        :return: Float of dataset accuracy [0..1].
         """
         number_correct = len(self.df_results[self.df_results["correct"] == True])
         number_total = len(self.df_results)
@@ -36,8 +40,8 @@ class ModelResults:
 
     def _get_misidentified_images(self):
         """
-        Return a list of the misidentified images.
-        :return: List of misidentified image names.
+        Return the names misidentified images.
+        :return: List of strings of misidentified image filenames.
         """
         df_misidentified = self.df_results[self.df_results["correct"] == False]
         misidentified_images = df_misidentified.index.tolist()
@@ -99,7 +103,7 @@ def main():
     # Produce our section blocks
     sections = list()
     sections.append(summary_section_template.render(
-        model_summaries=[vgg19_results, mobilenet_results],
+        model_results_list=[vgg19_results, mobilenet_results],
         number_misidentified=number_misidentified
     ))
     sections.append(table_section_template.render(
