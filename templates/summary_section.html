@@ -1,13 +1,15 @@
-<h2>Quick summary</h2>
-<h3>Accuracy</h3>
-{% for model_results in model_results_list %}
-<p><em>{{ model_results.model_name }}</em> analysed <em>{{ model_results.number_of_images }} image(s)</em>, achieving an
-    accuracy of <em>{{ "{:.2%}".format(model_results.accuracy) }}.</em></p>
-{% endfor %}
-<h3>Trouble spots</h3>
-{% for model_results in model_results_list %}
-<p><em>{{ model_results.model_name }}</em> misidentified <em>{{ model_results.number_misidentified }} image(s)</em>.</p>
-{% endfor %}
-<p><em>{{ number_misidentified }}</em> misidentified image(s) were common to all models.</p>
-
-
+<section class="container" id="summary">
+    <h2>Quick summary</h2>
+    <h3>Accuracy</h3>
+    {% for model_results in model_results_list %}
+    <p><em>{{ model_results.model_name }}</em> analysed <em>{{ model_results.number_of_images }} image(s)</em>,
+        achieving an
+        accuracy of <em>{{ "{:.2%}".format(model_results.accuracy) }}.</em></p>
+    {% endfor %}
+    <h3>Trouble spots</h3>
+    {% for model_results in model_results_list %}
+    <p><em>{{ model_results.model_name }}</em> misidentified <em>{{ model_results.number_misidentified }} image(s)</em>.
+    </p>
+    {% endfor %}
+    <p><em>{{ number_misidentified }}</em> misidentified image(s) were common to all models.</p>
+</section>
