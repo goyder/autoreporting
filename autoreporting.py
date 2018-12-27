@@ -52,7 +52,7 @@ class ModelResults:
         Return the results DataFrame as an HTML object.
         :return: String of HTML.
         """
-        html = self.df_results.to_html()
+        html = self.df_results.to_html(table_id=self.model_name)
         return html
 
 
