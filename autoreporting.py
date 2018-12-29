@@ -104,6 +104,7 @@ def main():
     )
     args = parser.parse_args()
 
+    # Create the model_results list, which holds the relevant information
     model_results = []
     for results_filepath in args.results_filepaths:
         results_root_name = os.path.splitext(os.path.basename(results_filepath))[0]
@@ -111,7 +112,7 @@ def main():
         model_results.append(
             ModelResults(model_name, results_filepath))
 
-    # Content to be published
+    # Create some more content to be published as part of this analysis
     title = "Model Report"
     misidentified_images = [set(results.misidentified_images) for results in model_results]
     number_misidentified = len(set.intersection(*misidentified_images))
