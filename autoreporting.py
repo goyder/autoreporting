@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import argparse
 from jinja2 import FileSystemLoader, Environment
 
 # Allow for very wide columns - otherwise columns are spaced and ellipse'd
@@ -52,7 +53,7 @@ class ModelResults:
         Return the results DataFrame as an HTML object.
         :return: String of HTML.
         """
-        html = self.df_results.to_html()
+        html = self.df_results.to_html(table_id=self.model_name)
         return html
 
 
@@ -94,35 +95,49 @@ def main():
     Render a template and write it to file.
     :return:
     """
-    # Content to be published
+    # Define and parse our arguments
+    parser = argparse.ArgumentParser(description="Convert results .csv files into an interactive report.")
+    parser.add_argument(
+        "results_filepaths",
+        nargs="+",
+        help="Path(s) to results file(s) with filename(s) '<model_name>_results.csv'."
+    )
+    args = parser.parse_args()
+
+    # Create the model_results list, which holds the relevant information
+    model_results = []
+    for results_filepath in args.results_filepaths:
+        results_root_name = os.path.splitext(os.path.basename(results_filepath))[0]
+        model_name = results_root_name.split("_results")[0]
+        model_results.append(
+            ModelResults(model_name, results_filepath))
+
+    # Create some more content to be published as part of this analysis
     title = "Model Report"
-    vgg19_results = ModelResults("VGG19", "datasets/VGG19_results.csv")
-    mobilenet_results = ModelResults("MobileNet", "datasets/MobileNet_results.csv")
-    number_misidentified = len(set(vgg19_results.misidentified_images) & set(mobilenet_results.misidentified_images))
+    misidentified_images = [set(results.misidentified_images) for results in model_results]
+    number_misidentified = len(set.intersection(*misidentified_images))
 
     # Produce our section blocks
     sections = list()
     sections.append(summary_section_template.render(
-        model_results_list=[vgg19_results, mobilenet_results],
+        model_results_list=model_results,
         number_misidentified=number_misidentified
     ))
-    sections.append(table_section_template.render(
-        model=vgg19_results.model_name,
-        dataset=vgg19_results.dataset,
-        table=vgg19_results.get_results_df_as_html())
-    )
-    sections.append(table_section_template.render(
-        model=mobilenet_results.model_name,
-        dataset=mobilenet_results.dataset,
-        table=mobilenet_results.get_results_df_as_html())
-    )
+    for model_result in model_results:
+        sections.append(table_section_template.render(
+            model=model_result.model_name,
+            dataset=model_result.dataset,
+            table=model_result.get_results_df_as_html())
+        )
 
     # Produce and write the report to file
     with open("outputs/report.html", "w") as f:
         f.write(base_template.render(
             title=title,
-            sections=sections
+            sections=sections,
+            model_results_list=model_results
         ))
+    print('Successfully wrote "report.html" to folder "outputs".')
 
 
 if __name__ == "__main__":
