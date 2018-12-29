@@ -121,7 +121,8 @@ def main():
     with open("outputs/report.html", "w") as f:
         f.write(base_template.render(
             title=title,
-            sections=sections
+            sections=sections,
+            model_results_list=[vgg19_results, mobilenet_results]
         ))
 
 

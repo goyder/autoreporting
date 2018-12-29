@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+        {% for model_results in model_results_list %}
+            $(document).ready( function () {
+                $('#{{ model_results.model_name }}').DataTable();
+            } );
+        {% endfor %}
+    </script>
 </head>
 <body>
 <section class="container" id="introduction">

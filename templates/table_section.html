@@ -1,9 +1,4 @@
 <section class="container" id="results.{{ model }}">
-    <script>
-    $(document).ready( function () {
-        $('#{{ model }}').DataTable();
-    } );
-    </script>
     <h2>{{ model }} - Model Results</h2>
     <p>Results for each image as predicted by model <i>'{{ model }}'</i>, as captured in file <i>'{{ dataset }}'</i>.</p>
     {{ table }}
